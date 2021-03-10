@@ -1,4 +1,4 @@
-package mydeveloperpal;
+package com.mydeveloperpal.executortasks;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
@@ -9,10 +9,10 @@ public class Producer implements Runnable {
   private static final int maxIntegersToProduce = 100;
   private static int counter = 0;
 
-  private final BlockingQueue<Integer> blockingQueue;
+  private final BlockingQueue<Message> source;
 
-  public Producer(BlockingQueue<Integer> blockingQueue) {
-    this.blockingQueue = blockingQueue;
+  public Producer(BlockingQueue<Message> source) {
+    this.source = source;
   }
 
   public void run() {
@@ -21,7 +21,7 @@ public class Producer implements Runnable {
 
   private void produceInteger() {
     try {
-      blockingQueue.put(++counter);
+      source.put(new Message(++counter));
     } catch(InterruptedException interruptedException) {
       Main.printMessage("Exception for number: "  + counter + " " + interruptedException.getMessage());
     }

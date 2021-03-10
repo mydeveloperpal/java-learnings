@@ -1,4 +1,4 @@
-package mydeveloperpal;
+package com.mydeveloperpal.scheduler;
 
 import java.util.ArrayList;
 import java.util.List;

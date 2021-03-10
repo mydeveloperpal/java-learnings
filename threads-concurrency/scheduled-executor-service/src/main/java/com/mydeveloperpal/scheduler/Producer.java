@@ -1,11 +1,8 @@
-package com.mydeveloperpal;
+package com.mydeveloperpal.scheduler;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Producer implements Runnable {
 

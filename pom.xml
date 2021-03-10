@@ -4,10 +4,11 @@
 
     <groupId>com.mydeveloper</groupId>
     <artifactId>java-learnings</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <modules>
-        <module>threads-executor-blockingqueue</module>
-        <module>threads-scheduler-blockingqueue</module>
+        <module>threads-concurrency</module>
+        <module>datastructures</module>
     </modules>
 </project>
