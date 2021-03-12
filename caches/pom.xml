@@ -9,19 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>threads-concurrency</artifactId>
+    <artifactId>caches</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>redis-jedis</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <modules>
-        <module>threadlocal</module>
-        <module>scheduled-executor-service</module>
-        <module>executor-service-submittasks</module>
-        <module>countdown-latch</module>
-    </modules>
 
 </project>

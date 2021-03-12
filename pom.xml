@@ -10,5 +10,6 @@
     <modules>
         <module>threads-concurrency</module>
         <module>datastructures</module>
+        <module>caches</module>
     </modules>
 </project>

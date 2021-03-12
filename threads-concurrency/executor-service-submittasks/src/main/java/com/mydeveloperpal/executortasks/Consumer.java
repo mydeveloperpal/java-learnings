@@ -8,7 +8,6 @@ public class Consumer implements Runnable {
   private final List<Message> tempHolder;
   private final ErrorManager errorManager;
 
-
   public Consumer(List<Message> tempHolder, ErrorManager errorManager) {
     this.tempHolder = tempHolder;
     this.errorManager = errorManager;
@@ -19,9 +18,7 @@ public class Consumer implements Runnable {
     try {
       Main.printMessage("Started processing elements " + tempHolder);
       sleep(3000);
-      if (new Random().nextBoolean()) {
-        throw new RuntimeException("Exception processing elements ");
-      }
+      throwAnError();
       Main.printMessage("Finished processing elements " + tempHolder);
     } catch (Exception e) {
       e.printStackTrace();
@@ -34,6 +31,12 @@ public class Consumer implements Runnable {
       Thread.sleep(milliSeconds);
     } catch(InterruptedException interruptedException) {
       Main.printMessage(interruptedException.getMessage());
+    }
+  }
+  
+  private void throwAnError() {
+    if(new Random().nextBoolean()) {
+        throw new RuntimeException("Exception processing elements ");
     }
   }
 
