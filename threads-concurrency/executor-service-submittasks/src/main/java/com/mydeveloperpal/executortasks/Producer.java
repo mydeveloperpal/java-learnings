@@ -25,7 +25,6 @@ public class Producer implements Runnable {
     } catch(InterruptedException interruptedException) {
       Main.printMessage("Exception for number: "  + counter + " " + interruptedException.getMessage());
     }
-
   }
 
   private static Integer numOfIntegersToProduce() {
